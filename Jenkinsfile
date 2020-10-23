@@ -6,17 +6,17 @@ pipeline {
  stages {
     stage("build") {
          steps {
-             bat 'echo building'
+             bat 'gradle --version'
          }
     }
      stage("test") {
          steps {
-             bat 'echo testing'
+             bat 'gradle uiTests'
          }
      }
      stage("deploy") {
          steps {
-             bat 'echo "deploying..."'
+             bat 'echo deploy '
          }
      }
  }

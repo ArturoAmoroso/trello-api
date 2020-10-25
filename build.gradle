@@ -78,27 +78,21 @@ task cucumber() {
     }
 }
 
-//test {
-//    useJUnitPlatform()
+//cluecumberReports {
+//    sourceJsonReportDirectory = "reports/cucumber-report/"
+//    generatedHtmlReportDirectory = "reports/cucumber-report/html/"
+//    expandBeforeAfterHooks = true
 //}
 
-cluecumberReports {
-    sourceJsonReportDirectory = "D:\\otros\\webUI\\repo\\trello-api\\reports\\cucumber-reports"
-    generatedHtmlReportDirectory = "D:\\otros\\webUI\\repo\\trello-api\\reports\\html"
-    expandBeforeAfterHooks = true
-}
-
-//cucumberui.finalizedBy generateCluecumberReports
-//
 task uiTests(type: Test) {
     include '**/RunCucumberTests*'
 }
 //uiTests.finalizedBy generateCluecumberReports
 
-task uiRerunTests(type: Test) {
-    include '**/ReRunCucumberTests*'
-}
-uiRerunTests.finalizedBy generateCluecumberReports
+//task uiRerunTests(type: Test) {
+//    include '**/ReRunCucumberTests*'
+//}
+//uiRerunTests.finalizedBy generateCluecumberReports
 
 tasks.withType(Test) {
     dependsOn cleanTest

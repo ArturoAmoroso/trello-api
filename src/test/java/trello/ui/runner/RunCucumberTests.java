@@ -15,17 +15,17 @@ import trello.ui.core.DriverManager;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {
-                "pretty",
+//        plugin = {
+//                "pretty",
 //                "html:reports/html/index.html",
 //                "de.monochromata.cucumber.report.PrettyReports:reports/cucumber",
-                "json:reports/cucumber-reports/cucumber.json",
-                "rerun:reports/rerun/rerun.txt"
-        },
+//                "json:reports/cucumber-reports/cucumber.json",
+////                "rerun:reports/rerun/rerun.txt"
+//        },
 
         features = "src/test/resources/features-ui",
         glue = "trello.ui",
-        tags = "@outline"
+        tags = "@bvt"
 )
 public class RunCucumberTests {
         @AfterClass
